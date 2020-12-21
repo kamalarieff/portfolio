@@ -8,7 +8,20 @@
     "start:web": "next start",
     "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
     "start:sanity": "cp .env ./studio/.env.development && cd studio && sanity start",
-    "postinstall": "lerna bootstrap"
+    "postinstall": "lerna bootstrap",
+    "eslint": "eslint './**/*.{js,jsx,ts,tsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "prettier --write",
+      "eslint .",
+      "git add"
+    ]
   },
   "dependencies": {
     "@sanity/block-content-to-react": "2.0.7",
@@ -24,10 +37,17 @@
     "next-sanity": "^0.1.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@sanity/cli": "^2.0.5",
+    "eslint": "^7.16.0",
+    "eslint-config-prettier": "^7.1.0",
+    "husky": "^4.3.6",
     "lerna": "^3.22.1",
+    "lint-staged": "^10.5.3",
     "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.2.1",
     "tailwindcss": "^1.5.2"
   }
 }
