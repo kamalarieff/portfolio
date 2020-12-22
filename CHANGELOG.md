@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/kamalarieff/portfolio/compare/v1.2.0...v1.2.1) (2020-12-22)
+
+
+### Bug Fixes
+
+* fix missing standard-version in package.json ([#6](https://github.com/kamalarieff/portfolio/issues/6)) ([d259cfe](https://github.com/kamalarieff/portfolio/commit/d259cfe84bed3ce9cb1dfea50a45a5cac377f83a))
+* **eslint:** fix eslint not working for studio code ([#5](https://github.com/kamalarieff/portfolio/issues/5)) ([d283b92](https://github.com/kamalarieff/portfolio/commit/d283b92fa016e797096922581fd785b112b96417)), closes [#2](https://github.com/kamalarieff/portfolio/issues/2)
+
 ## 1.2.0 (2020-12-22)
 
 
