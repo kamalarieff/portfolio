@@ -9,11 +9,14 @@
     "build:sanity": "cd studio && sanity build ../public/studio -y && cd ..",
     "start:sanity": "cp .env ./studio/.env.development && cd studio && sanity start",
     "postinstall": "lerna bootstrap",
-    "eslint": "eslint './**/*.{js,jsx,ts,tsx}'"
+    "eslint": "eslint './**/*.{js,jsx,ts,tsx}'",
+    "release": "HUSKY_SKIP_HOOKS=1 standard-version"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "lint-staged": {
@@ -39,8 +42,12 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/eslint-parser": "^7.12.1",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@sanity/cli": "^2.0.5",
+    "commitizen": "^4.2.2",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",
     "husky": "^4.3.6",
