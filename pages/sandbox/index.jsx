@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Folder, File } from "phosphor-react";
-import { motion } from "framer-motion";
+import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
 
 const TreeComponent = ({ children }) => (
   <div className="leading-4">{children}</div>
@@ -11,22 +11,43 @@ TreeComponent.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-const FileComponent = ({ name }) => (
-  <div className="pl-4 flex items-center">
+const FileComponent = ({ name, symlink }) => (
+  <div className="pl-4 flex items-center space-x-1">
     <File size={24} />
-    <span className="ml-1">{name}</span>
+    <span>{name}</span>
+    {symlink && (
+      <motion.span
+        className="text-blue-400 font-mono mt-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.6 }}
+      >
+        symlink -> {symlink}
+      </motion.span>
+    )}
   </div>
 );
 
 FileComponent.propTypes = {
   name: PropTypes.string.isRequired,
+  symlink: PropTypes.string,
 };
 
-const FolderComponent = ({ name, children }) => (
+const FolderComponent = ({ name, children, symlink }) => (
   <div className="pl-4">
-    <div className="flex items-center">
+    <div className="flex items-center space-x-1">
       <Folder size={24} />
-      <span className="ml-1">{name}</span>
+      <span>{name}</span>
+      {symlink && (
+        <motion.span
+          className="text-blue-400 font-mono mt-1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+        >
+          symlink -> {symlink}
+        </motion.span>
+      )}
     </div>
     <div>{children}</div>
   </div>
@@ -34,7 +55,8 @@ const FolderComponent = ({ name, children }) => (
 
 FolderComponent.propTypes = {
   name: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
+  symlink: PropTypes.string,
 };
 
 const Tree = TreeComponent;
@@ -63,54 +85,53 @@ const SandboxPage = () => {
   const startAnimation = () => setPosition("end");
   const restartAnimation = () => setPosition("start");
 
-  const variants = {
-    start: {
-      x: 0,
-      y: 0,
-      color: "initial",
-    },
-    end: {
-      x: -225,
-      y: -24,
-      color: "#4299e1",
-    },
-  };
-
   return (
     <div className="m-20">
       <div className="flex space-x-4">
         <Button onClick={startAnimation}>Start</Button>
         <Button onClick={restartAnimation}>Restart</Button>
       </div>
-      <div className="flex space-x-8">
-        <div>
-          <h1 className="text-4xl">Tree</h1>
-          <Tree>
-            <Tree.Folder name="/">
-              <Tree.Folder name="home">
-                <Tree.Folder name="kamalarieff" />
-              </Tree.Folder>
-            </Tree.Folder>
-          </Tree>
-        </div>
-        <div>
-          <h1 className="text-4xl">Tree</h1>
-          <Tree>
-            <Tree.Folder name="/">
-              <Tree.Folder name="home">
-                <Tree.Folder name="kamalarieff">
-                  <Tree.Folder name="dotfiles">
-                    <motion.div
-                      animate={position}
-                      variants={variants}
-                      transition={{
-                        ease: "easeInOut",
-                        color: {
-                          ease: "easeInOut",
-                          delay: 0.8,
-                        },
-                      }}
-                    >
+      <div>
+        <h1 className="text-4xl">Tree</h1>
+        <Tree>
+          <Tree.Folder name="/">
+            <Tree.Folder name="home">
+              <Tree.Folder name="kamalarieff">
+                <AnimateSharedLayout>
+                  {/* Symlinked files start */}
+                  <AnimatePresence>
+                    {position === "end" && (
+                      <motion.div
+                        layout
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                      >
+                        <Tree.Folder name=".config">
+                          <Tree.Folder name="bspwm" symlink="../dotfiles/bspwm">
+                            <Tree.File name="bspwmrc" />
+                          </Tree.Folder>
+                          <Tree.Folder name="sxhkd" symlink="../dotfiles/sxhkd">
+                            <Tree.File name="sxhkdrc" />
+                          </Tree.Folder>
+                          <Tree.Folder
+                            name="polybar"
+                            symlink="../dotfiles/polybar"
+                          >
+                            <Tree.File name="config" />
+                          </Tree.Folder>
+                        </Tree.Folder>
+                        <Tree.File
+                          name=".bash_profile"
+                          symlink="dotfiles/.bash_profile"
+                        />
+                        <Tree.File name=".zshrc" symlink="dotfiles/.zshrc" />
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                  {/* Symlinked files end */}
+                  <motion.div layout>
+                    <Tree.Folder name="dotfiles">
                       <Tree.Folder name=".config">
                         <Tree.Folder name="bspwm">
                           <Tree.File name="bspwmrc" />
@@ -124,13 +145,13 @@ const SandboxPage = () => {
                       </Tree.Folder>
                       <Tree.File name=".bash_profile" />
                       <Tree.File name=".zshrc" />
-                    </motion.div>
-                  </Tree.Folder>
-                </Tree.Folder>
+                    </Tree.Folder>
+                  </motion.div>
+                </AnimateSharedLayout>
               </Tree.Folder>
             </Tree.Folder>
-          </Tree>
-        </div>
+          </Tree.Folder>
+        </Tree>
       </div>
     </div>
   );
