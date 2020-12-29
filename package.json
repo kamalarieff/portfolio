@@ -31,6 +31,7 @@
     "@emotion/styled": "^11.0.0",
     "@sanity/block-content-to-react": "2.0.7",
     "@sanity/client": "1.149.18",
+    "@sanity/code-input": "^2.1.0",
     "@sanity/image-url": "0.140.19",
     "classnames": "2.2.6",
     "date-fns": "2.15.0",
