@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/kamalarieff/portfolio/compare/v1.4.0...v1.5.0) (2020-12-29)
+
+
+### Features
+
+* **header:** refactor header component to include other links ([#10](https://github.com/kamalarieff/portfolio/issues/10)) ([a18c7a2](https://github.com/kamalarieff/portfolio/commit/a18c7a2016b6566a836dd89a3538c0d1f3ddf6b7)), closes [#8](https://github.com/kamalarieff/portfolio/issues/8)
+
 ## [1.4.0](https://github.com/kamalarieff/portfolio/compare/v1.3.0...v1.4.0) (2020-12-29)
 
 
