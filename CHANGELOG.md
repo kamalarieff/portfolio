@@ -2,6 +2,31 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/kamalarieff/portfolio/compare/v1.2.1...v1.3.0) (2020-12-29)
+
+
+### Features
+
+* add code-input to sanity studio ([9c24792](https://github.com/kamalarieff/portfolio/commit/9c24792db5ffbb4fbc865036d3686e98d89a3936))
+* add custom component ([a429bef](https://github.com/kamalarieff/portfolio/commit/a429befc243efd9b215d472a707990f4d29ad59e))
+* add ping animation component ([e766811](https://github.com/kamalarieff/portfolio/commit/e766811a778af94000f15050ac900cc822bec854))
+* add unsplash to sanity studio image component ([6e0f359](https://github.com/kamalarieff/portfolio/commit/6e0f3599354d24f1d5380bfbcb772d69ce544d39))
+* change styling for markdown ([5759d4f](https://github.com/kamalarieff/portfolio/commit/5759d4fc3d1febefe449a4c3dd5a05bf77efa237))
+* create a sandbox page to play around with libraries ([866e384](https://github.com/kamalarieff/portfolio/commit/866e3845bbde854887913b78da3851eecd0ebdd2))
+* make animation much better and cleaner ([c3a1602](https://github.com/kamalarieff/portfolio/commit/c3a16027ce47d1872b5bad5e685c3d63d484627a))
+* render proper types for post body ([9d6ce58](https://github.com/kamalarieff/portfolio/commit/9d6ce58a09e4007997d5c53c91a64a518e716dbb))
+
+
+### Bug Fixes
+
+* add code-input to studio lockfile ([98c3f93](https://github.com/kamalarieff/portfolio/commit/98c3f93eccbeac423fcef280855cb81b380228bb))
+* change version to independent ([da1d2a1](https://github.com/kamalarieff/portfolio/commit/da1d2a182b898c93e430a675089af3dd78a7369b))
+* fix unable to deploy to vercel ([96407ca](https://github.com/kamalarieff/portfolio/commit/96407ca6f65467934c16de44bb38b5fc1ca6311e))
+* hide symlink full text for mobile ([5fb113a](https://github.com/kamalarieff/portfolio/commit/5fb113aa57b950f5c78fedcb4d323349b3dbc163))
+* increase lerna version ([bc5948a](https://github.com/kamalarieff/portfolio/commit/bc5948a5cabb57656ec04d392631c0655aef9096))
+* redundant margin for cover image ([24d7a71](https://github.com/kamalarieff/portfolio/commit/24d7a71aa9b74f8b67f42811576119bab6f30b18))
+* remove packages from lerna.json ([d2bc319](https://github.com/kamalarieff/portfolio/commit/d2bc319be1fa4e6a922686c849c3f2d40915c53a))
+
 ### [1.2.1](https://github.com/kamalarieff/portfolio/compare/v1.2.0...v1.2.1) (2020-12-22)
 
 
