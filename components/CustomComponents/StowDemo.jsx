@@ -17,12 +17,12 @@ const FileComponent = ({ name, symlink }) => (
     <span>{name}</span>
     {symlink && (
       <motion.span
-        className="text-blue-400 font-mono mt-1 text-sm md:text-base"
+        className="text-blue-400 font-mono mt-1 text-sm md:text-base flex"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6 }}
       >
-        symlink -> {symlink}
+        symlink<span className="hidden md:block"> -> {symlink}</span>
       </motion.span>
     )}
   </div>
@@ -40,12 +40,12 @@ const FolderComponent = ({ name, children, symlink }) => (
       <span>{name}</span>
       {symlink && (
         <motion.span
-          className="text-blue-400 font-mono mt-1 text-sm md:text-base"
+          className="text-blue-400 font-mono mt-1 text-sm md:text-base flex"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
         >
-          symlink -> {symlink}
+          symlink<span className="hidden md:block"> -> {symlink}</span>
         </motion.span>
       )}
     </div>
