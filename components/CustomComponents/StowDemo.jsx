@@ -63,13 +63,21 @@ const Tree = TreeComponent;
 Tree.Folder = FolderComponent;
 Tree.File = FileComponent;
 
+const Ping = () => (
+  <span className="flex absolute">
+    <span className="relative inline-flex rounded-full h-3 w-3 bg-pink-500 -mt-3 ml-20"></span>
+    <span className="animate-ping inline-flex rounded-full h-3 w-3 bg-pink-500 -mt-3 -ml-3"></span>
+  </span>
+);
+
 const Button = ({ onClick, children }) => (
   <motion.button
     whileHover={{ scale: 1.1 }}
     whileTap={{ scale: 0.9 }}
     onClick={onClick}
-    className="text-sm p-2 bg-blue-400 rounded"
+    className="text-sm p-2 bg-blue-400 w-24 rounded"
   >
+    <Ping />
     {children}
   </motion.button>
 );
@@ -87,10 +95,11 @@ const StowDemo = () => {
 
   return (
     <div className="w-full">
-      <div className="flex space-x-4">
-        <Button onClick={startAnimation}>Start</Button>
-        <Button onClick={restartAnimation}>Restart</Button>
-      </div>
+      <Button
+        onClick={position === "start" ? startAnimation : restartAnimation}
+      >
+        {position === "start" ? "Stow" : "Unstow"}
+      </Button>
       <div>
         <span className="text-4xl font-bold">Tree</span>
         <Tree>
