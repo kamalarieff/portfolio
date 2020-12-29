@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/kamalarieff/portfolio/compare/v1.3.0...v1.4.0) (2020-12-29)
+
+
+### Features
+
+* install twin.macro ([#9](https://github.com/kamalarieff/portfolio/issues/9)) ([87974cb](https://github.com/kamalarieff/portfolio/commit/87974cb82b8758ffc5983af3dadb4c267263ec8d))
+
 ## [1.3.0](https://github.com/kamalarieff/portfolio/compare/v1.2.1...v1.3.0) (2020-12-29)
 
 
