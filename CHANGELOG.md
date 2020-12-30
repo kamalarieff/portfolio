@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/kamalarieff/portfolio/compare/v1.5.1...v1.6.0) (2020-12-30)
+
+
+### Features
+
+* implement absolute imports ([#12](https://github.com/kamalarieff/portfolio/issues/12)) ([f136bf5](https://github.com/kamalarieff/portfolio/commit/f136bf5a4ca4150f1cd9cfc4e7f9901a8186db68))
+
 ### [1.5.1](https://github.com/kamalarieff/portfolio/compare/v1.5.0...v1.5.1) (2020-12-29)
 
 ## [1.5.0](https://github.com/kamalarieff/portfolio/compare/v1.4.0...v1.5.0) (2020-12-29)
