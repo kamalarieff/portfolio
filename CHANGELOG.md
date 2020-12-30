@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/kamalarieff/portfolio/compare/v1.6.0...v1.7.0) (2020-12-30)
+
+
+### Features
+
+* update footer ([#14](https://github.com/kamalarieff/portfolio/issues/14)) ([e4e7df3](https://github.com/kamalarieff/portfolio/commit/e4e7df38b7cbf8481558dcce93339c4dc19952cd)), closes [#13](https://github.com/kamalarieff/portfolio/issues/13)
+
 ## [1.6.0](https://github.com/kamalarieff/portfolio/compare/v1.5.1...v1.6.0) (2020-12-30)
 
 
