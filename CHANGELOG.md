@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/kamalarieff/portfolio/compare/v1.7.0...v1.8.0) (2021-01-01)
+
+
+### Features
+
+* Add profile page ([#16](https://github.com/kamalarieff/portfolio/issues/16)) ([29c99ae](https://github.com/kamalarieff/portfolio/commit/29c99aea8881f6bd683c5de5c36f95707acb5645)), closes [#15](https://github.com/kamalarieff/portfolio/issues/15) [#15](https://github.com/kamalarieff/portfolio/issues/15)
+
 ## [1.7.0](https://github.com/kamalarieff/portfolio/compare/v1.6.0...v1.7.0) (2020-12-30)
 
 
