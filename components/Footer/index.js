@@ -14,7 +14,7 @@ export default function Footer() {
           css={css`
             min-height: 10vh;
           `}
-          tw="flex space-x-4 items-center underline"
+          tw="max-w-2xl mx-auto flex space-x-4 items-center underline"
         >
           <a
             href="https://github.com/kamalarieff"
