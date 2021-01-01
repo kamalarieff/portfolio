@@ -48,7 +48,6 @@ export async function getStaticProps() {
         proficiencies,
         "imageUrl": image.asset->url
     }`);
-  console.log("data", data);
   return {
     props: data,
     revalidate: 1,
