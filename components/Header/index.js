@@ -1,23 +1,30 @@
 import Link from "next/link";
 /** @jsx jsx **/
-import { jsx } from "@emotion/react";
-import "twin.macro";
+import { css, jsx } from "@emotion/react";
+import tw from "twin.macro";
 
 export default function Header() {
   return (
     <h2 tw="text-xl font-bold tracking-tight leading-tight pb-20 pt-8 cursor-pointer md:(text-4xl tracking-tighter)">
-      <div tw="flex space-x-4">
+      <div
+        css={css`
+          & > a:hover {
+            ${tw`underline`}
+          }
+        `}
+        tw="flex space-x-8"
+      >
         <Link href="/">
-          <a tw="hover:underline">Home</a>
+          <a>Home</a>
         </Link>
         <Link href="/">
-          <a tw="hover:underline">Projects</a>
+          <a>Projects</a>
         </Link>
         <Link href="/blog">
-          <a tw="hover:underline">Blog</a>
+          <a>Blog</a>
         </Link>
         <Link href="/profile">
-          <a tw="hover:underline">Me</a>
+          <a>About Me</a>
         </Link>
       </div>
     </h2>
