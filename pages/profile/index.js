@@ -8,12 +8,14 @@ import client from "@lib/sanity";
 import Layout from "@components/layout";
 import Container from "@components/container";
 import Header from "@components/Header";
+import Intro from "@components/intro";
 
 const Profile = ({ preview, ...props }) => {
   return (
     <Layout preview={preview}>
-      <Header />
       <Container>
+        <Header />
+        <Intro title="About me" />
         {/*
         <div tw="space-y-4 md:(bg-blue-200 -m-4 p-4 rounded)">
           */}
