@@ -1,16 +1,21 @@
 import React from "react";
 import "twin.macro";
 /** @jsx jsx **/
-import { jsx } from "@emotion/react";
+import { css, jsx } from "@emotion/react";
 import { GithubLogo, LinkedinLogo } from "phosphor-react";
 
 import Container from "@components/container";
 
 export default function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
+    <footer className="bg-accent-2 border-t border-accent-2">
       <Container>
-        <div tw="flex space-x-4 py-8 underline">
+        <div
+          css={css`
+            min-height: 10vh;
+          `}
+          tw="flex space-x-4 items-center underline"
+        >
           <a
             href="https://github.com/kamalarieff"
             target="_blank"
