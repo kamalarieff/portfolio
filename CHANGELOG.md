@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/kamalarieff/portfolio/compare/v1.8.0...v1.9.0) (2021-01-03)
+
+
+### Features
+
+* upgrade tailwind to version 2 ([#20](https://github.com/kamalarieff/portfolio/issues/20)) ([51df5ec](https://github.com/kamalarieff/portfolio/commit/51df5ec7e7d2d4b18011e8512112c986d7871049))
+
 ## [1.8.0](https://github.com/kamalarieff/portfolio/compare/v1.7.0...v1.8.0) (2021-01-01)
 
 
