@@ -100,7 +100,7 @@ const StowDemo = () => {
       >
         {position === "start" ? "Stow" : "Unstow"}
       </Button>
-      <div>
+      <div className="mt-4">
         <span className="text-4xl font-bold">Tree</span>
         <Tree>
           <Tree.Folder name="/">
