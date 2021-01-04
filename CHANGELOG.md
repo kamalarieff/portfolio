@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.9.2 (2021-01-04)
+
+
+### Bug Fixes
+
+* fix various ui issues after tailwind upgrade to v2 ([#26](https://github.com/kamalarieff/portfolio/issues/26)) ([3ed4ac5](https://github.com/kamalarieff/portfolio/commit/3ed4ac5311b7322ad177f504704484669748e14a)), closes [#25](https://github.com/kamalarieff/portfolio/issues/25)
+
 ### 1.9.1 (2021-01-04)
 
 ## [1.9.0](https://github.com/kamalarieff/portfolio/compare/v1.8.0...v1.9.0) (2021-01-03)
