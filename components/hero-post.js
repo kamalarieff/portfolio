@@ -1,13 +1,19 @@
-import Date from '../components/date'
-import CoverImage from '../components/cover-image'
-import Link from 'next/link'
 import React from "react";
+import Link from "next/link";
+
+import Date from "@components/date";
+import CoverImage from "@components/cover-image";
 
 export default function HeroPost({ title, coverImage, date, slug }) {
   return (
-    <section>
+    <section className="max-w-5xl mx-auto">
       <div className="mb-8 md:mb-16">
-        <CoverImage slug={slug} imageObject={coverImage} title={title} url={coverImage} />
+        <CoverImage
+          slug={slug}
+          imageObject={coverImage}
+          title={title}
+          url={coverImage}
+        />
       </div>
       <div className="md:grid md:grid-cols-2 md:col-gap-16 lg:col-gap-8 mb-20 md:mb-28">
         <div>
@@ -22,5 +28,5 @@ export default function HeroPost({ title, coverImage, date, slug }) {
         </div>
       </div>
     </section>
-  )
+  );
 }
