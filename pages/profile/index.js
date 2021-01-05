@@ -19,7 +19,7 @@ const Profile = ({ preview, ...props }) => {
         {/*
         <div tw="space-y-4 md:(bg-blue-200 -m-4 p-4 rounded)">
           */}
-        <div tw="space-y-4 max-w-2xl mx-auto">
+        <div tw="space-y-4 max-w-2xl mx-auto mb-32">
           <div tw="flex items-center space-x-4">
             <img src={props.imageUrl} tw="w-24 h-24" />
             <p tw="text-3xl font-bold">{props.name}</p>
