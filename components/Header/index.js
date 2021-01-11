@@ -12,7 +12,7 @@ import {
   useDisclosure,
   IconButton,
 } from "@chakra-ui/react";
-import { List } from "phosphor-react";
+import { List, X } from "phosphor-react";
 
 export default function Header() {
   // const { isOpen, onOpen, onClose } = useDisclosure();
@@ -44,13 +44,24 @@ export default function Header() {
             ]}
             onClick={(e) => e.stopPropagation()}
           >
-            <nav className="mt-10 px-6 w-full -ml-5">
-              <a
-                className="flex items-center p-2 my-6 transition-colors duration-200 text-gray-600 rounded-lg "
-                href="#"
-              >
-                <span className="mx-4 text-lg font-normal">Element</span>
-              </a>
+            <nav className="mt-4 pl-12 w-full -ml-5 text-3xl font-bold tracking-tight leading-tight flex flex-col space-y-2 relative">
+              <div className="w-full mb-4">
+                <button onClick={() => setOpen(false)} className="float-right">
+                  <X size={36} />
+                </button>
+              </div>
+              <Link href="/">
+                <a>Home</a>
+              </Link>
+              <Link href="/">
+                <a>Projects</a>
+              </Link>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+              <Link href="/profile">
+                <a>About Me</a>
+              </Link>
             </nav>
           </div>
         </div>
