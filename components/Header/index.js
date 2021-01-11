@@ -3,14 +3,6 @@ import Link from "next/link";
 /** @jsx jsx **/
 import { css, jsx } from "@emotion/react";
 import tw from "twin.macro";
-import {
-  Drawer,
-  DrawerBody,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  IconButton,
-} from "@chakra-ui/react";
 import { List, X } from "phosphor-react";
 
 export default function Header() {
