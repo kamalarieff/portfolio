@@ -17,8 +17,8 @@ export default function Index({ allPosts, preview }) {
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
         </Head>
+        <Header />
         <Container>
-          <Header />
           <Intro title="Blog" />
           {heroPost && (
             <HeroPost
