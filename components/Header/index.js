@@ -5,6 +5,21 @@ import { css, jsx } from "@emotion/react";
 import tw from "twin.macro";
 import { List, X } from "phosphor-react";
 
+const pages = [
+  {
+    href: "/",
+    title: "Home",
+  },
+  {
+    href: "/blog",
+    title: "Blog",
+  },
+  {
+    href: "/profile",
+    title: "About Me",
+  },
+];
+
 export default function Header() {
   const [open, setOpen] = React.useState(false);
 
@@ -40,18 +55,11 @@ export default function Header() {
                   <X size={36} />
                 </button>
               </div>
-              <Link href="/">
-                <a>Home</a>
-              </Link>
-              <Link href="/">
-                <a>Projects</a>
-              </Link>
-              <Link href="/blog">
-                <a>Blog</a>
-              </Link>
-              <Link href="/profile">
-                <a>About Me</a>
-              </Link>
+              {pages.map(({ href, title }, index) => (
+                <Link href={href} key={index}>
+                  <a>{title}</a>
+                </Link>
+              ))}
             </nav>
           </div>
         </div>
@@ -66,18 +74,11 @@ export default function Header() {
           `}
           tw="flex space-x-8"
         >
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-          <Link href="/">
-            <a>Projects</a>
-          </Link>
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-          <Link href="/profile">
-            <a>About Me</a>
-          </Link>
+          {pages.map(({ href, title }, index) => (
+            <Link href={href} key={index}>
+              <a>{title}</a>
+            </Link>
+          ))}
         </div>
       </h2>
       {/* Desktop header end */}
