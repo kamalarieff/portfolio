@@ -11,11 +11,24 @@ import Container from "@components/container";
 import Header from "@components/Header";
 import Intro from "@components/intro";
 
+const keywords = [
+  "malaysia",
+  "software engineer",
+  "software developer",
+  "mudah",
+];
+
 const Profile = ({ preview, ...props }) => {
   return (
     <>
       <Head>
-        <title>Kamal Arieff's Profile</title>
+        <title>About Kamal Arieff</title>
+        <meta
+          name="description"
+          content="About Kamal Arieff"
+          key="description"
+        />
+        <meta name="keywords" content={keywords.join(", ")} key="keywords" />
       </Head>
       <Layout preview={preview}>
         <Header />

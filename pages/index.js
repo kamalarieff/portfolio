@@ -8,6 +8,8 @@ import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Header from "../components/Header";
 
+const keywords = ["malaysia", "software engineer", "software developer"];
+
 export default function Index({ allPosts, preview }) {
   const heroPost = allPosts[0];
   const morePosts = allPosts.slice(1);
@@ -15,7 +17,13 @@ export default function Index({ allPosts, preview }) {
     <>
       <Layout preview={preview}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Kamal Arieff</title>
+          <meta
+            name="description"
+            content="Dedicated software engineer from Malaysia. Always interested in learning something new."
+            key="description"
+          />
+          <meta name="keywords" content={keywords.join(", ")} key="keywords" />
         </Head>
         <Header />
         <Container>
