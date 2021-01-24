@@ -34,6 +34,11 @@ export default function Post({ post, morePosts, preview }) {
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
+                <meta name="description" content={post.description} />
+                <meta
+                  name="keywords"
+                  content={post?.keywords?.join(", ") || ""}
+                />
                 {/* <meta property="og:image" content={post.ogImage.url} /> */}
               </Head>
               <PostHeader
