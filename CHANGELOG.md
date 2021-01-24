@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.9.5 (2021-01-24)
+
+
+### Bug Fixes
+
+* **studio:** reorder keywords and description fields ([4926a29](https://github.com/kamalarieff/portfolio/commit/4926a29998787c3bde07d0269b00f1d112459ee0))
+
 ### 1.9.4 (2021-01-24)
 
 ### 1.9.3 (2021-01-11)
