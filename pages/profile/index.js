@@ -1,4 +1,5 @@
 import React from "react";
+import Head from "next/head";
 import "twin.macro";
 /** @jsx jsx **/
 import { css, jsx } from "@emotion/react";
@@ -12,34 +13,39 @@ import Intro from "@components/intro";
 
 const Profile = ({ preview, ...props }) => {
   return (
-    <Layout preview={preview}>
-      <Header />
-      <Container>
-        <Intro title="About me" />
-        {/*
+    <>
+      <Head>
+        <title>Kamal Arieff's Profile</title>
+      </Head>
+      <Layout preview={preview}>
+        <Header />
+        <Container>
+          <Intro title="About me" />
+          {/*
         <div tw="space-y-4 md:(bg-blue-200 -m-4 p-4 rounded)">
           */}
-        <div tw="space-y-4 max-w-2xl mx-auto mb-32">
-          <div tw="flex items-center space-x-4">
-            <img src={props.imageUrl} tw="w-24 h-24" />
-            <p tw="text-3xl font-bold">{props.name}</p>
+          <div tw="space-y-4 max-w-2xl mx-auto mb-32">
+            <div tw="flex items-center space-x-4">
+              <img src={props.imageUrl} tw="w-24 h-24" />
+              <p tw="text-3xl font-bold">{props.name}</p>
+            </div>
+            <BlockContent blocks={props.bio} />
+            <div tw="space-y-2">
+              <p tw="text-2xl font-bold">Skills</p>
+              <ul tw="list-disc list-inside">
+                {props.proficiencies.map((language) => {
+                  return (
+                    <li tw="ml-4" key={language}>
+                      {language}
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
           </div>
-          <BlockContent blocks={props.bio} />
-          <div tw="space-y-2">
-            <p tw="text-2xl font-bold">Proficiencies</p>
-            <ul tw="list-disc list-inside">
-              {props.proficiencies.map((language) => {
-                return (
-                  <li tw="ml-4" key={language}>
-                    {language}
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        </div>
-      </Container>
-    </Layout>
+        </Container>
+      </Layout>
+    </>
   );
 };
 
