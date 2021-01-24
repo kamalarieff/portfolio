@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.9.9](https://github.com/kamalarieff/portfolio/compare/v1.9.8...v1.9.9) (2021-01-24)
+
+
+### Bug Fixes
+
+* Test changelog generation ([18a546f](https://github.com/kamalarieff/portfolio/commit/18a546f5f3c5b80079ba7fbb684f5a604f9c4357))
+
 ### 1.9.7 (2021-01-24)
 
 ### 1.9.6 (2021-01-24)
