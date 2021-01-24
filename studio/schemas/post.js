@@ -9,12 +9,6 @@ export default {
       type: "string",
     },
     {
-      name: "keywords",
-      title: "Keywords",
-      type: "array",
-      of: [{ type: "string" }],
-    },
-    {
       name: "slug",
       title: "Slug",
       type: "slug",
@@ -28,6 +22,12 @@ export default {
       title: "Description",
       type: "text",
       rows: 5,
+    },
+    {
+      name: "keywords",
+      title: "Keywords",
+      type: "array",
+      of: [{ type: "string" }],
     },
     {
       name: "author",
