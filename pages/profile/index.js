@@ -1,15 +1,64 @@
 import React from "react";
 import Head from "next/head";
-import "twin.macro";
+import tw from "twin.macro";
 /** @jsx jsx **/
 import { css, jsx } from "@emotion/react";
 import BlockContent from "@sanity/block-content-to-react";
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiReact,
+  SiNextDotJs,
+  SiTailwindcss,
+  SiNodeDotJs,
+  SiDocker,
+} from "react-icons/si";
 
 import client from "@lib/sanity";
 import Layout from "@components/layout";
 import Container from "@components/container";
 import Header from "@components/Header";
 import Intro from "@components/intro";
+
+const iconStyles = css`
+  ${tw`h-20 w-20 border-2 shadow-md border-gray-200 rounded-md p-2`}
+`;
+
+const skills = [
+  {
+    title: "CSS",
+    component: <SiCss3 css={iconStyles} />,
+  },
+  {
+    title: "HTML",
+    component: <SiHtml5 css={iconStyles} />,
+  },
+  {
+    title: "JavaScript",
+    component: <SiJavascript css={iconStyles} />,
+  },
+  {
+    title: "React",
+    component: <SiReact css={iconStyles} />,
+  },
+  {
+    title: "Next.js",
+    component: <SiNextDotJs css={iconStyles} />,
+  },
+  {
+    title: "Tailwind",
+    component: <SiTailwindcss css={iconStyles} />,
+  },
+  {
+    title: "Node.js",
+    component: <SiNodeDotJs css={iconStyles} />,
+  },
+  {
+    title: "Docker",
+    component: <SiDocker css={iconStyles} />,
+  },
+];
 
 const keywords = [
   "malaysia",
@@ -45,15 +94,20 @@ const Profile = ({ preview, ...props }) => {
             <BlockContent blocks={props.bio} />
             <div tw="space-y-2">
               <p tw="text-2xl font-bold">Skills</p>
-              <ul tw="list-disc list-inside">
-                {props.proficiencies.map((language) => {
+              <div tw="flex flex-wrap w-full">
+                {skills.map(({ title, component }) => {
                   return (
-                    <li tw="ml-4" key={language}>
-                      {language}
-                    </li>
+                    <div
+                      key={title}
+                      title={title}
+                      tw="w-1/3 md:w-1/6 flex flex-col justify-center items-center my-4 space-y-2"
+                    >
+                      {component}
+                      <span tw="text-xs text-gray-500">{title}</span>
+                    </div>
                   );
                 })}
-              </ul>
+              </div>
             </div>
           </div>
         </Container>
