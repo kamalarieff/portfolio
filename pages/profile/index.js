@@ -22,7 +22,7 @@ import Header from "@components/Header";
 import Intro from "@components/intro";
 
 const iconStyles = css`
-  ${tw`h-20 w-20 border-2 shadow-md border-gray-200 rounded-md p-2`}
+  ${tw`h-20 w-full border-2 border-gray-200 rounded-md p-2`}
 `;
 
 const skills = [
@@ -94,16 +94,12 @@ const Profile = ({ preview, ...props }) => {
             <BlockContent blocks={props.bio} />
             <div tw="space-y-2">
               <p tw="text-2xl font-bold">Skills</p>
-              <div tw="flex flex-wrap w-full">
+              <div tw="grid grid-cols-3 md:grid-cols-6 w-full gap-4">
                 {skills.map(({ title, component }) => {
                   return (
-                    <div
-                      key={title}
-                      title={title}
-                      tw="w-1/3 md:w-1/6 flex flex-col justify-center items-center my-4 space-y-2"
-                    >
+                    <div key={title} title={title} tw="space-y-2">
                       {component}
-                      <span tw="text-xs text-gray-500">{title}</span>
+                      <p tw="text-xs text-gray-500 text-center">{title}</p>
                     </div>
                   );
                 })}
