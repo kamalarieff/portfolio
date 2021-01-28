@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.9.13 (2021-01-28)
+
+
+### Bug Fixes
+
+* Replace all phosphor-icons with react-icons ([5940e25](https://github.com/kamalarieff/portfolio/commit/5940e25a606206fad41f289e12594c22146f8fdf))
+
 ### 1.9.12 (2021-01-28)
 
 ### 1.9.11 (2021-01-24)
