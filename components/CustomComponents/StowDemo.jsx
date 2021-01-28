@@ -1,7 +1,14 @@
 import React, { useState } from "react";
+import tw from "twin.macro";
+/** @jsx jsx **/
+import { css, jsx } from "@emotion/react";
 import PropTypes from "prop-types";
-import { Folder, File } from "phosphor-react";
+import { FaRegFolder, FaRegFile } from "react-icons/fa";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
+
+const iconStyles = css`
+  ${tw`w-6 h-6`}
+`;
 
 const TreeComponent = ({ children }) => (
   <div className="leading-4">{children}</div>
@@ -12,8 +19,8 @@ TreeComponent.propTypes = {
 };
 
 const FileComponent = ({ name, symlink }) => (
-  <div className="pl-4 flex items-center space-x-1">
-    <File size={24} />
+  <div tw="pl-4 flex items-center space-x-1 my-1">
+    <FaRegFile css={iconStyles} />
     <span>{name}</span>
     {symlink && (
       <motion.span
@@ -34,9 +41,9 @@ FileComponent.propTypes = {
 };
 
 const FolderComponent = ({ name, children, symlink }) => (
-  <div className="pl-4">
-    <div className="flex items-center space-x-1">
-      <Folder size={24} />
+  <div tw="pl-4 my-1">
+    <div tw="flex items-center space-x-1">
+      <FaRegFolder css={iconStyles} />
       <span>{name}</span>
       {symlink && (
         <motion.span
