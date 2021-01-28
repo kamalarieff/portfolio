@@ -1,10 +1,14 @@
 import React from "react";
-import "twin.macro";
+import tw from "twin.macro";
 /** @jsx jsx **/
 import { css, jsx } from "@emotion/react";
-import { GithubLogo, LinkedinLogo } from "phosphor-react";
+import { SiGithub, SiLinkedin } from "react-icons/si";
 
 import Container from "@components/container";
+
+const iconStyles = css`
+  ${tw`w-6 h-6`}
+`;
 
 export default function Footer() {
   return (
@@ -14,24 +18,24 @@ export default function Footer() {
           css={css`
             min-height: 10vh;
           `}
-          tw="max-w-2xl mx-auto flex space-x-4 items-center underline"
+          tw="max-w-2xl mx-auto flex space-x-4 md:space-x-6 items-center underline"
         >
           <a
             href="https://github.com/kamalarieff"
             target="_blank"
             rel="noreferrer"
-            tw="hover:cursor-pointer flex space-x-1"
+            tw="hover:cursor-pointer flex space-x-2 items-center"
           >
-            <GithubLogo size={24} />
+            <SiGithub css={iconStyles} />
             <span>Github</span>
           </a>
           <a
             href="https://www.linkedin.com/in/kamal-arieff-ahmad-faizel-058b0a79"
             target="_blank"
             rel="noreferrer"
-            tw="hover:cursor-pointer flex space-x-1"
+            tw="hover:cursor-pointer flex space-x-2 items-center"
           >
-            <LinkedinLogo size={24} />
+            <SiLinkedin css={iconStyles} />
             <span>LinkedIn</span>
           </a>
         </div>

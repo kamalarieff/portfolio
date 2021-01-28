@@ -3,7 +3,11 @@ import Link from "next/link";
 /** @jsx jsx **/
 import { css, jsx } from "@emotion/react";
 import tw from "twin.macro";
-import { List, X } from "phosphor-react";
+import { IoMdMenu, IoMdClose } from "react-icons/io";
+
+const iconStyles = css`
+  ${tw`w-8 h-8`}
+`;
 
 const pages = [
   {
@@ -28,9 +32,9 @@ export default function Header() {
       <div className="md:hidden">
         {/* There is some padding on the svg. So need to remove by 1 for the margin */}
         <div className="ml-4 py-4">
-          <List size={36} onClick={() => setOpen(!open)}>
+          <IoMdMenu css={iconStyles} onClick={() => setOpen(!open)}>
             Open
-          </List>
+          </IoMdMenu>
         </div>
         <div
           css={[
@@ -52,7 +56,7 @@ export default function Header() {
             <nav className="mt-4 pl-12 w-full -ml-5 text-3xl font-bold tracking-tight leading-tight flex flex-col space-y-2 relative">
               <div className="w-full mb-4">
                 <button onClick={() => setOpen(false)} className="float-right">
-                  <X size={36} />
+                  <IoMdClose css={iconStyles} />
                 </button>
               </div>
               {pages.map(({ href, title }, index) => (
