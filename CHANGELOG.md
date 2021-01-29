@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.11.0 (2021-01-29)
+
+
+### Features
+
+* add google analytics ([#35](https://github.com/kamalarieff/portfolio/issues/35)) ([824e9ea](https://github.com/kamalarieff/portfolio/commit/824e9ea4b952f35a4c9848341125846bde32ef57))
+
 ## 1.10.0 (2021-01-29)
 
 
