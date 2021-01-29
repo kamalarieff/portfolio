@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.10.0 (2021-01-29)
+
+
+### Features
+
+* show different images based on the width ([#34](https://github.com/kamalarieff/portfolio/issues/34)) ([ea01209](https://github.com/kamalarieff/portfolio/commit/ea01209a4aac482cd98f2d23cd854a9affc39945))
+
 ### 1.9.13 (2021-01-28)
 
 
