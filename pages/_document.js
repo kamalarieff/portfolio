@@ -9,6 +9,15 @@ export default class MyDocument extends Document {
             rel="icon"
             href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-VTFNHCM2S9"
+          ></script>
+          <script>
+            window.dataLayer = window.dataLayer || []; function gtag()
+            {typeof window !== "undefined" && dataLayer.push(arguments)}
+            gtag('js', new Date()); gtag('config', 'G-VTFNHCM2S9');
+          </script>
         </Head>
         <body>
           <Main />
