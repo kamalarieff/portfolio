@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.11.1 (2021-01-31)
+
+
+### Bug Fixes
+
+* Fix GA script not working ([#36](https://github.com/kamalarieff/portfolio/issues/36)) ([3f7f987](https://github.com/kamalarieff/portfolio/commit/3f7f987be4e8952a04255c1e22f5e61b5ccfbf99))
+
 ## 1.11.0 (2021-01-29)
 
 
